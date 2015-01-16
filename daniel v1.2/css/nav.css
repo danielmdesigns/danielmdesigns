@@ -1,0 +1,63 @@
+/*Hide dropdown links until they are needed*/
+li ul {
+	display: none;
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	font-family: montserrat, sans-serif;
+	font-weight: 700;
+	text-decoration: none;
+	color: #fff;
+	background: rgba(40, 40, 40, 0.4);
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+	width: 95%;
+	height: 35px;
+	line-height: 35px;
+/*	border-radius: 5px;*/
+	letter-spacing: 5px;
+}
+.downarrow{
+	vertical-align: middle;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+
+/*Responsive Styles*/
+
+@media screen and (max-width : 780px){
+	/*Make dropdown links appear inline*/
+	ul {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	ul li, li a {
+		width: 100%;
+		
+	}
+	/*Display 'show menu' link*/
+	.show-menu {
+		display:block;
+	}
+}
